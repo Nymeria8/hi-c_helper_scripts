@@ -1,0 +1,36 @@
+# hi-c_helper_scripts
+
+A set of python scripts to deal with hi-c interactions matrices, and make inputs for circos.
+
+##Usage:
+
+In the command line:
+
+1. **cross_matrix.py**: uses 2 hi-c matrixes and makes a table with the interactions in comum and not in common - requires itertools
+<pre><code>python cross_matrix.py [cromossome] [start] [end] [matrix1] [matrix2] [outfile]
+</code></pre>
+
+
+2. **getgenes.py**:This script uses the biomart server to search for genes in the interval of the genome defined by the user. - requires biomart for python
+<pre><code>python blast2goannott2definition.py blast2go.annot output.annot "mail@example.com"
+</code></pre>
+
+3. **categorize.py**: This scripts was used as part of a redundancy pipeline. It forms groups of homologies, when a homologie search of sequences against themselves is made. It clusters the sequences by their mutual hits
+<pre><code>python categorize.py tabular_blast_output_outfmt6 outfile
+</code></pre>
+
+4. **fastalist.py**: It retrives a subset of fasta sequences, given a list of headers and a a set of fasta sequences.
+<pre><code>python fastalist.py setOfFasta.fasta headersList output.fasta
+</code></pre>
+
+5. **stats.py**: make basic stats for a group of fasta files
+<pre><code>python stats.py fastafile
+</code></pre>
+
+5. **polimorph_gtf.py**: cross a gtf and a vcf file and gives a series of statistics.
+<pre><code>python polimorph_gtf.py infile.gtf infile.vcf
+</code></pre>
+
+##License:
+
+GPLv2
